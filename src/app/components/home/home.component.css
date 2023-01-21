@@ -1,0 +1,19 @@
+.container{
+    height: 100%;
+}
+button{
+    height: 55px;
+    width: 500px;
+    background-color: #fbfcfe;
+    font-size: 20px;
+}
+
+.row-in-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .rowInItem div img{
+     margin-right: 100px;
+      margin-bottom: 100px; 
+} */

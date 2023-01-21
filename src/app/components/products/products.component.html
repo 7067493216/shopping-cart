@@ -1,0 +1,31 @@
+<div class="container">
+
+    <button class="btn btn-primary me-3" style="margin: 15px;" (click)="onAddProduct($event)">Add Product</button>
+   <button class="btn btn-primary" style="margin: 15px;" (click)="deleteAllProduct()">clear All Data</button>
+
+    <table class="table table-bordered border-primary">
+        <tr>
+            
+            <th class="col">Name</th>
+            <th class="col">Gender</th>
+            <th class="col">Price</th>
+            <th class="col">Currency</th>
+            <th class="col">Quantity</th>
+            <th class="col">Image</th>
+            <th class="col">Color</th>
+            <th class="col">Action</th>
+        </tr>
+        <tr  *ngFor="let prod of Products">
+            <td class="col">{{prod.name}}</td>
+            <td class="col">{{prod.gender}}</td>
+            <td class="col">{{prod.price | number : '1.2-2'}}</td>
+            <td class="col">{{prod.currency}}</td>
+            <td class="col">{{prod.quantity}}</td>
+            <td class="col"><img src="assets\images\{{prod.image}}" /></td>
+            <td class="col">{{prod.color}}</td>
+            <td class="col"><span><i class="fa fa-trash me-3" aria-hidden="true" (click)="deleteRow(prod.id)"></i> <i class="fa fa-edit" aria-hidden="true" (click)="editRow(prod.id)"></i></span></td>
+
+        </tr>
+
+    </table>
+</div>

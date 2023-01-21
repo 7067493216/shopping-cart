@@ -1,0 +1,23 @@
+.container{
+    height: 90%;
+}
+
+.resetandsave-button{
+    /* margin: 30px; */
+    justify-content: center;
+    
+}
+
+.header-divspan{
+    display: flex;
+    justify-content: space-between;
+}
+.main-div{
+    display: flex;
+}
+.equal-div{
+    width: 50%;
+}
+img{
+    margin-left: 150px;
+}

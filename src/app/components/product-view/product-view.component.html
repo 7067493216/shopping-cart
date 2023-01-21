@@ -1,0 +1,40 @@
+<section>
+  <div class="above-item">
+    <div class="Search-iccon">
+      <input type="search" multiple class="form-control fas fa-search search-icon" name="search"  [(ngModel)]="searchItem"
+        autocomplete="off" placeholder="Search product">
+    </div>
+    <div>
+      <button class="btn btn-primary" (click)="goToForm($event)">go to cart</button>
+      <button   class="fa fa-user" (click)="onSignout()">Signout</button>
+    </div>
+  </div>
+
+  <div class="spacer">
+    <div class="container">
+      <div class="row mt-2 ">
+        <div class="col">
+          <div class="row shop-listing">
+            <div class="col-lg-4" *ngFor="let user of Products | filter:searchItem">
+              <div class="card shop-hover border-0">
+                <img src="assets\images\{{user.image}}" />
+                <div>{{user.color}} <span class="user-color" >{{user.name}}</span> </div>
+                <div class="user-currency" ><span >{{user.currency}}</span>
+                  {{user.price }}</div>
+                <div>.for <span class="user-gender" >{{user.gender}}</span></div>
+                <div *ngIf="returnToCartQuantity(user.id)>0">.Selected Item Quantity: <span
+                  class="user-quantity" >{{returnToCartQuantity(user.id)}}</span></div>
+                <div *ngIf="returnToCartQuantity(user.id)==0" ><button class="btn btn-primary" style="margin: 10px;" (click)="productAddToCart(user.id,user.quantity)">Add
+                    to cart</button></div>
+                <span *ngIf="returnToCartQuantity(user.id)>0"><button type="button" class="increase-button" 
+                    (click)="onItemReduce(user.id,user.quantity)" >-</button>{{returnToCartQuantity(user.id)}}<button type="button" class="decrease-button" 
+                    (click)="onItemIncrease(user.id,user.quantity)">+</button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

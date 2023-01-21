@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="cont-div">
+        <button type="button" class="btn btn-primary me-3" (click)="backToProduct()">Back to
+            Product</button>
+        <button class="fa fa-user" (click)="onSignout()">Signout</button>
+    </div>
+    <div class="class-table">
+        <div class="main-table ">
+            <table class="table table-bordered border-primary me-3">
+                <tr class="table-cont">
+                    <th class="col">Product</th>
+                    <th class="col">Price</th>
+                    <th class="col">Quantity</th>
+                    <th class="col">Total(in INR)</th>
+                </tr>
+                <tr *ngFor="let item of carts">
+                    <td *ngIf="item.quantity>0"> <i class="fa fa-trash me-3" aria-hidden="true"
+                            (click)="onDelete(item.id)"></i><img class="img-tag"
+                            src="assets\images\{{item.product.image}}" />{{item.product.name}}</td>
+                    <td class="table-price" *ngIf="item.quantity>0">{{item.product.currency}}{{item.product.price |
+                        number : '1.2-2'}}</td>
+                    <td class="table-button" *ngIf="item.quantity>0"><button type="button"
+                            (click)="onDecrease(item.product.id,item.quantity)">-</button>{{item.quantity}}<button type="button"
+                            (click)="onIncrease(item.product.id,item.product.quantity)">+</button></td>
+                    <td class="total-price" *ngIf="item.quantity>0">{{( item.product.currency == "$" ?(item.product.price*item.quantity*72 | number : '1.2-2') : item.product.price*item.quantity )}}</td>
+                    <!-- user.currency == "$$" ? (user.price*72 | number : '1.2-2') : user.price   -->
+                </tr>
+            </table>
+        </div>
+        <div class="table-type">
+            <div class="card-header">
+                <h5>Cart Totals</h5>
+            </div>
+            <table class="table table-bordered border-primary">
+                <tr>
+                    <th>Total Items</th>
+                    <th class="quant">{{quant}}</th>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <th class="total-price">{{totalPrice}}</th>
+                </tr>
+            </table>
+            <button class="overall-cost"> Proceed to Checkout </button>
+        </div>
+    </div>
+</div>

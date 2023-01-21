@@ -1,0 +1,33 @@
+header{
+    /* background-color: rgb(101, 101, 204); */
+    justify-content: center;
+}
+
+img{
+    height:40px;
+    width:40px;
+    margin-left: 50px;
+}
+
+.headerDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.togethr{
+    display: flex;
+
+}
+.headerDiv div button{
+    margin-right: 100px;
+    border: none;
+    background-color: white;
+}
+
+.headerDiv span{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.submit-home{
+    color: #8a2be2;
+}
+

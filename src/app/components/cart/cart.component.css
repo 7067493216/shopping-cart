@@ -1,0 +1,107 @@
+/* .back-but{
+    display: flex;
+    margin-left: 1100px;
+    margin-top: 50px;
+} */
+.main-table{
+    width: 80%;
+}
+.main-table table{
+    width: 100%;
+}
+
+
+table, td, th {
+    border: 1px solid rgb(232, 229, 229);
+   
+  }
+  
+  .table-type table {
+    border-collapse: collapse;
+    /* width: 50%; */
+     height: 110px; 
+  }
+  .table-type{
+    height: 230px;
+    width: 470px;
+    border: 1px solid rgb(250, 246, 246);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    box-shadow: 2px 5px 5px rgb(236, 227, 227);
+}
+
+  .card-header{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(235, 229, 229);
+    text-align: center;
+    align-items: center;
+  }
+
+  .card-header h5{
+    align-items: center;
+    color: rgb(74, 73, 73);
+  }
+
+  .class-table{
+    display: flex;
+    justify-content: center;
+   padding: 10px;
+  }
+  .cont-div{
+    justify-content: space-between; display: flex;
+  }
+  .btn-primary{
+    margin: 5px;
+  }
+  .fa-user{
+    color: blueviolet; margin-left: 1000px; border: hidden; background-color: white;
+  }
+  .table-cont{
+    background-color: rgb(235, 229, 229); height: 40px;
+  }
+
+  td button{
+    height: 40px;
+    width: 40px;
+    border: hidden;
+    margin: 13px;
+    background-color: rgb(250, 248, 248);
+    box-shadow: 8px 5px 8px gainsboro;
+    /* border-radius: 10px; */
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+  }
+  .deleteCart{
+    height:30px;
+    width: 75px;
+  }
+  /* .fa-trash{
+    height: 40px; width: 40px; background-color: rgb(250, 248, 248); box-shadow: 8px 5px 8px gainsboro; margin: 5px;text-align: center; justify-content: center;
+  } */
+  .img-tag{
+    height: 80px;width: 60px; box-shadow: 3px 4px 8px   gainsboro; margin: 10px;
+  }
+  .table-price{
+    color:rgb(143, 206, 231) ;
+  }
+  .table-button{
+    justify-content: center; align-items: center;
+  }
+  .total-price{
+    color:rgb(143, 206, 231) ;
+  }
+  .quant{
+    color:rgb(143, 206, 231) ;
+  }
+
+.total-price{
+  color:rgb(143, 206, 231) ;
+}
+.overall-cost{
+  background-color: rgb(221, 217, 233); box-shadow: 7px 5px 9px rgb(243, 240, 240);; margin: 5px;text-align: center; justify-content: center; border: hidden; height: 40px;
+}
+

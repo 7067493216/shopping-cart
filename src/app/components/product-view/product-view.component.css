@@ -1,0 +1,120 @@
+/* .card-body{
+    border: black;
+}
+
+.form-row{
+    border: rgb(158, 139, 139);
+    display: flex;
+}  */
+/* .container {
+    flex-direction: row ;
+  }
+
+.ticket-box{
+    height: 100%;
+    width: 18%;
+   
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    border: 1px black solid;
+    align-content: flex-start;
+}
+
+.aboveItem{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+
+
+ */
+ .Search-iccon{
+    display: flex;
+    width: 60%;
+ }
+ 
+ 
+
+img{
+    height:306px;
+    width: 306;
+    
+    
+}
+
+.above-item{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.aboveItem button{
+    margin-left: 50px;
+}
+.card{
+    
+    background-color: rgb(250, 248, 248);
+    box-shadow: 18px 15px 18px rgb(210, 207, 207);
+   margin: 5px;text-align: center;
+   justify-content: center;
+   padding: 0px;
+   border-radius: 30px;
+   margin: 10px;
+}
+.fa-search{
+    height: 50px;width: 80%; margin: 5px;
+}
+.fa-user{
+    color: blueviolet;border: hidden; background-color: white;
+}
+.user-color{
+    color: rgb(134, 134, 216);
+}
+.user-currency{
+    color:rgb(143, 206, 231);
+}
+.user-currency span{
+    color: rgb(60, 253, 60);
+}
+.user-gender{
+    color: fuchsia;
+}
+.user-quantity{
+    color:rgb(143, 206, 231); 
+}
+ .increase-button{
+    height: 40px;
+                  width: 40px;
+                  border: hidden;
+                  margin: 13px;
+                  background-color: rgb(250, 248, 248);
+                  box-shadow: 8px 5px 8px #dcdcdc;
+                  /* border-radius: 10px; */
+                  align-items: center;
+                  justify-content: center;
+                  padding: 3px;
+} 
+.decrease-button{
+    height: 40px;
+                    width: 40px;
+                    border: hidden;
+                    margin: 13px;
+                    background-color: rgb(250, 248, 248);
+                    box-shadow: 8px 5px 8px gainsboro;
+                    /* border-radius: 10px; */
+                    align-items: center;
+                    justify-content: center;
+                    padding: 3px;
+}
+

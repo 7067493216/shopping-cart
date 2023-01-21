@@ -1,0 +1,16 @@
+.Copyright{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Copyright img{
+    height: 30px;
+    width: 30px;
+}
+
+.bg-light{
+    color: rgb(137, 67, 154);
+}
+

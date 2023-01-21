@@ -1,0 +1,147 @@
+<div class="container">
+    <form [formGroup]="addProductForm">
+        <div class="header-divspan">
+            <div>
+                <h1 style="justify-content: center; align-items: center;">Add Product</h1>
+            </div>
+            <div>
+                <button class="btn btn-primary" style="margin: 15px;" (click)="goToTheProductListeningPage($event)">go
+                    to the product listening page</button>
+            </div>
+        </div>
+        <div class="main-div">
+            <div class="equal-div">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" formControlName="name"
+                                [ngClass]="{'is-invalid':submitted && v['name'].errors}" />
+                            <!-- [ngClass]="{'is-invalid':submitted && v['name'].errors}"  -->
+                            <div *ngIf="submitted  && v['name'].errors" class="alert-error">
+                                <div *ngIf="submitted && v['name'].errors['required'] " class="alert-error"
+                                    style="color: crimson;">
+                                    name is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Gender<span class="text-danger">*</span></label>
+                            <br />
+                            <select appendTo="body" bindLabel="name" bindValue="id" formControlName="gender"
+                                [ngClass]="{'is-invalid':submitted && v['name'].errors}">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                                <!-- [items]="Gendersdata" -->
+                            </select>
+                            <div *ngIf="submitted  && v['gender'].errors" class="alert-error">
+                                <div *ngIf="submitted && v['gender'].errors['required'] " class="alert-error"
+                                    style="color: crimson;">
+                                    gender is required
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="form-group">
+                            <label for="image" class="form-label" class="form-label">Image upload<span
+                                    class="text-danger">*</span></label>
+                            <input type="file" class="form-control" formControlName="image" class="form-control"
+                                (change)="onFileUpload($event)" #selectFile autocomplete="off"
+                                [ngClass]="{'is-invalid':submitted && v['name'].errors}" />
+                            <div *ngIf="submitted  && v['image'].errors" class="alert-error">
+                                <div *ngIf="submitted && v['image'].errors['required'] " class="alert-error"
+                                    style="color: crimson;">
+                                    image is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Quantity<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" formControlName="quantity"
+                                [ngClass]="{'is-invalid':submitted && v['name'].errors}" />
+                            <div *ngIf="submitted  && v['quantity'].errors" class="alert-error">
+                                <div *ngIf="submitted && v['quantity'].errors['required'] " class="alert-error"
+                                    style="color: crimson;">
+                                    quantity is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Color<span class="text-danger">*</span></label>
+                            <br />
+                            <select appendTo="body" bindLabel="name" bindValue="id" formControlName="color"
+                                [ngClass]="{'is-invalid':submitted && v['name'].errors}">
+                                <option value="red">red</option>
+                                <option value="blue">blue</option>
+                                <option value="white">white</option>
+                                <option value="black">black</option>
+                                <option value="yellow">yellow</option>
+                                <option value="green">green</option>
+                                <option value="grey">grey</option>
+                                <!-- [items]="colorsData" -->
+                            </select>
+                            <div *ngIf="submitted  && v['color'].errors" class="alert-error">
+                                <div *ngIf="submitted && v['color'].errors['required'] " class="alert-error"
+                                    style="color: crimson;">
+                                    color is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Price<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" formControlName="price"
+                                [ngClass]="{'is-invalid':submitted && v['name'].errors}" />
+                            <div *ngIf="submitted  && v['price'].errors" class="alert-error">
+                                <div *ngIf="submitted && v['price'].errors['required'] " class="alert-error"
+                                    style="color: crimson;">
+                                    price is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="conversion">Currency<span class="text-danger">*</span></label>
+                            <br />
+                            <select appendTo="body" bindLabel="name" bindValue="id" formControlName="currency"
+                                [ngClass]="{'is-invalid':submitted && v['name'].errors}">
+                                <option value="INR">INR</option>
+                                <option value="$">$$</option>
+                                <!-- [value]="1.0/1.0 + '*INR'" -->
+                                <!-- [value]="1.0/66.2 + '*$$'" -->
+                            </select>
+                            <div *ngIf="submitted  && v['currency'].errors" class="alert-error">
+                                <div *ngIf="submitted && v['currency'].errors['required'] " class="alert-error"
+                                    style="color: crimson;">
+                                    currency is required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="resetandsave-button">
+                    <button type="button" class="btn btn-danger me-1" (click)="onReset()">reset</button>
+                    <button type="button" class="btn btn-success" (click)="onSubmit()">save</button>
+                </div>
+            </div>
+            <div>
+                <img src="assets\images\Vector 176 (2).png" width="452" height="535" priority>
+            </div>
+        </div>
+    </form>
+</div>
